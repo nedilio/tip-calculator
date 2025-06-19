@@ -40,6 +40,7 @@ function App() {
               <input
                 type="text"
                 id="bill"
+                inputMode="numeric"
                 className="w-full p-2 rounded-lg bg-gray-700 text-white"
                 placeholder="Enter bill amount"
                 value={bill}
