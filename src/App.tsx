@@ -23,11 +23,14 @@ function App() {
   };
   return (
     <>
-      <div className="flex items-center flex-col justify-center gap-4 h-screen bg-gradient-to-br from-cyan-600 to-cyan-900 text-white">
+      <div className="flex items-center flex-col justify-center gap-4 h-screen bg-gradient-to-br from-cyan-600 to-cyan-900 text-white p-8">
         <div className="flex flex-col items-center justify-center gap-2">
           <h1 className="">Tip Calculator</h1>
           <h2 className="text-6xl">{moneyFormat(tip)}</h2>
-          <p>Total Payment {moneyFormat(total)}</p>
+          <p className="text-lg">
+            Total Payment{" "}
+            <span className="font-bold">{moneyFormat(total)}</span>
+          </p>
         </div>
         <div className="bg-gray-800 p-6 rounded-3xl">
           <form action="">
@@ -42,6 +45,7 @@ function App() {
                 placeholder="Enter bill amount"
                 value={bill}
                 onChange={formatToMoneyFromDigits}
+                className="text-lg"
               />
             </div>
           </form>
