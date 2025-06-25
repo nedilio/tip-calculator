@@ -10,8 +10,12 @@ export default defineConfig({
     react(),
     tailwindcss(),
     VitePWA({
-      registerType: "prompt", // Keeps the service worker updated
+      registerType: "prompt",
       manifest: {
+        display: "standalone",
+        scope: "/",
+        start_url: "/",
+        orientation: "portrait",
         name: "Valentina Tip Calculator",
         short_name: "Tip Calculator",
         description: "A PWA for calculating tips and splitting bills",
@@ -36,16 +40,12 @@ export default defineConfig({
             purpose: "apple touch icon",
           },
           {
-            src: "/maskable_icon.png",
+            src: "/maskable_icon_x512.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "any maskable",
           },
         ],
-        display: "standalone",
-        scope: "/",
-        start_url: "/",
-        orientation: "portrait",
       },
     }),
   ],
