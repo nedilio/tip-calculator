@@ -24,6 +24,9 @@ function App() {
   return (
     <>
       <div className="flex items-center flex-col justify-center gap-4 h-screen bg-gradient-to-br from-cyan-600 to-cyan-900 text-white p-8">
+        <div>
+          <img src="/logo.webp" alt="logo" className="size-36" />
+        </div>
         <div className="flex flex-col items-center justify-center gap-2">
           <h1 className="text-2xl font-bold">Tip Calculator</h1>
           <h2 className="text-6xl font-mono">{moneyFormat(tip)}</h2>
